@@ -1,0 +1,59 @@
+// Start off all hidden, like
+body {
+	transition: opacity 0.5s ease-in-out;
+	background: $gray-darker;
+	opacity: 0;
+	overflow-y: scroll;
+
+	// but when we're ready to go, let it rip
+	&.page-ready {
+		opacity: 1;
+	}
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-family-sans-serif;
+
+	span {
+		font-family: $font-family-serif;
+	}
+}
+
+
+
+.main-content {
+	margin-top: $navbar-height;
+	color: $white;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+		margin-left: $navbar-height;
+	}
+}
+
+
+circle.rotate {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-width: 3px;
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: transparent;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: anim-circle-border $transition-time ease-in-out infinite alternate;
+}
+
+
+// PERCENT CIRCLE ANIMATION
+@keyframes anim-circle-border {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -600;
+  }
+}

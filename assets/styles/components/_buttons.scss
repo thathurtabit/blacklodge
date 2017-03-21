@@ -1,0 +1,75 @@
+.btn-scroll {
+	transition: background ($transition-time / 2) ease-out;
+	width: 24px;
+	height: 24px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,0.5);
+	transform: rotate(45deg);
+	position: absolute;
+	left: 50%;
+	margin-left: -12px;
+	box-shadow: none;
+
+	&:hover {
+		cursor: pointer;
+		background: $white;
+	}
+
+	// before, after
+	&::before {
+		content: "";
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -5px;
+		margin-top: -5px;
+		border-width: 2px;
+		border-style: solid;
+	}
+}
+
+.btn-scroll--down {
+	bottom: 40px;	
+
+	&::before {
+		border-color: transparent rgba(255,255,255,0.5) rgba(255,255,255,0.5) transparent;
+		animation: down-arrow $transition-time ease-in-out 2s infinite alternate;
+	}
+	&:hover::before {
+		border-color: transparent $gray-darker $gray-darker transparent;
+	}
+}
+
+@keyframes down-arrow {
+    from {
+      transform: translate(1px, 1px);
+    }
+    to {
+      transform: translate(-1px, -1px);
+    }
+}
+
+
+.btn-scroll--up {
+	top: 40px;
+
+	&::before {
+		border-color: rgba(255,255,255,0.5) transparent transparent rgba(255,255,255,0.5);
+		animation: up-arrow $transition-time ease-in-out 2s infinite alternate;
+	}
+
+	&:hover::before {
+		border-color: $gray-darker transparent transparent $gray-darker;
+	}
+}
+
+@keyframes up-arrow {
+    from {
+      transform: translate(-1px, -1px);
+    }
+    to {
+      transform: translate(1px, 1px);
+    }
+}
