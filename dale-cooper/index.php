@@ -21,7 +21,7 @@
     </div>
     <div id="page-info" class="page-info page-info--dale-cooper sps">
             
-     <h2><span>Special Agent</span>Dale Cooper Info</h2>
+     <h2><span>Meet Special Agent</span>Dale Cooper</h2>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>

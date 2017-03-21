@@ -21,11 +21,15 @@
     </div>
     <div id="page-info" class="page-info page-info--chester-desmond sps">
             
-     <h2><span>Special Agent</span> Chester Desmond Info</h2>
+     <h2><span>Meet Special Agent</span>Chester Desmond</h2>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
+
+      <a href="<?php echo $root; ?>/phillip-jefferies" class="btn-next">
+        <span>Meet:</span> Phillip Jefferies
+      </a>
 
     </div>
   </div>

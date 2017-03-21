@@ -21,11 +21,15 @@
     </div>
     <div id="page-info" class="page-info page-info--laura-palmer sps">
             
-     <h2>Laura Palmer Info</h2>
+     <h2><span>Meet</span>Laura Palmer</h2>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
+
+      <a href="../chester-desmond" class="btn-next">
+        <span>Meet:</span> Chester Desmond
+      </a>
 
     </div>
   </div>

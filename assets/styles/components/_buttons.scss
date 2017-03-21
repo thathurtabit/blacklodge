@@ -73,3 +73,25 @@
       transform: translate(1px, 1px);
     }
 }
+
+.btn-next {
+	font-size: 10px;
+    position: absolute;
+    bottom: 40px;
+    padding: 3px 10px;
+    border: 1px solid $white;
+    color: $white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+	span {
+		text-transform: none;
+		letter-spacing: 0;
+		color: $gray-light;
+	}
+
+	&:hover {
+		background: $white;
+		color: $gray-darker;
+	}
+}

@@ -21,11 +21,15 @@
     </div>
     <div id="page-info" class="page-info page-info--mike sps">
             
-     <h2>Mike Info</h2>
+     <h2><span>Meet</span>Mike</h2>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
+
+      <a href="<?php echo $root; ?>/man-from-another-place" class="btn-next">
+        <span>Meet:</span> Man from Another Place
+      </a>
 
     </div>
   </div>

@@ -6,6 +6,7 @@
     justify-content: center;
     background-size: cover;
     position: relative;
+    overflow-x: hidden;
 }
 
 .page h1 {
@@ -90,6 +91,13 @@
 		transition-delay: $transition-time;
 		transform: translate(0, 30px);
 		opacity: 0;
+		font-size: 40px;
+
+		span {
+			display: block;
+			font-size: 20px;
+			color: $gray;
+		}
 	}
 
 	// WHEN IN VIEW
@@ -117,8 +125,9 @@
 
 .page::before{
 	content: "";
-	transition: opacity $transition-time ease-in-out;
+	transition: opacity $transition-time ease-in-out, transform ($transition-time * 30) ease-out;
 	transition-delay: $transition-time;
+	transform: scale(1);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
@@ -131,6 +140,7 @@
 
 	.loaded & {
 		opacity: 1;
+		transform: scale(1.15);
 	}
 }
 
@@ -169,3 +179,30 @@
 .page--dale-cooper {
 	background-image: url("../images/bg-dale-cooper.jpg");
 }
+
+.page-info-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+.text-col {
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.text-col > p:first-of-type {
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.text-col > p:first-line {
+	text-transform: uppercase;
+}
+
+cite {
+	font-family: $font-family-serif;
+	color: $gray;
+	font-style: normal;
+}
+

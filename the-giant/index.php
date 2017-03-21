@@ -22,11 +22,15 @@
     </div>
     <div id="page-info" class="page-info page-info--the-giant sps">
             
-     <h2>The Giant Info</h2>
+     <h2><span>Meet</span>The Giant</h2>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
+
+      <a href="<?php echo $root; ?>/laura-palmer" class="btn-next">
+        <span>Meet:</span> Laura Palmer
+      </a>
 
     </div>
   </div>

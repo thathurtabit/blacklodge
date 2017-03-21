@@ -22,6 +22,11 @@
       init: function() {
         // JavaScript to be fired on all pages
 
+        function loaderAnim() {
+          //$('#loading-cover').show().delay(50).queue(function(next) { $(this).addClass("hello-app"); next(); }).delay(50).fadeOut('250',function(){$(this);});
+          $('#loading-cover').show();
+        }
+
         // SCROLL BUTTONS
         function scrollButtons() {
           // DOWN
@@ -38,10 +43,53 @@
           });
         }
 
+          // You should really clean this up...
           $('.nav-link').click(function() {
             $('.nav-item').removeClass('active');
             $(this).parent().addClass('active');          
           });
+
+          $('.page-info--home .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-bob').addClass('active');          
+          });
+
+          $('.page-info--bob .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-mike').addClass('active');          
+          });
+
+          $('.page-info--mike .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-man').addClass('active');          
+          });
+
+          $('.page-info--the-man .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-giant').addClass('active');          
+          });
+
+          $('.page-info--the-giant .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-laura').addClass('active');          
+          });
+
+          $('.page-info--laura-palmer .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-chester').addClass('active');          
+          });
+
+          $('.page-info--chester-desmond .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-phillip').addClass('active');          
+          });
+
+          $('.page-info--phillip-jefferies .btn-next').click(function() {
+            $('.nav-item').removeClass('active');
+            $('.nav-dale').addClass('active');          
+          });
+
+
         
         
 
@@ -84,7 +132,7 @@
         // To see if images were loaded before displaying them
         function checkImages() {
             $('.page').imagesLoaded( { background: true }, function() {
-              console.log('background image loaded');
+              $('#loading-cover').addClass("hello-app").delay(50).fadeOut('250');
               $('.barba-container').addClass('loaded');
             });
         }
@@ -99,9 +147,7 @@
               // FIRE FUNCTIONS AFTER FONT HAS LOADED
               $('body').addClass('page-ready');
               $('.barba-container').addClass('active');
-
-              //$('.barba-container').addClass('active');
-              $('#loading-cover').delay(50).queue(function(next) { $(this).addClass("hello-app"); next(); }).delay(50).fadeOut('250',function(){$(this).remove();});
+              loaderAnim();
               
           }
         });
@@ -124,6 +170,7 @@
           ScrollPosStyler.init();
           scrollSections();
           scrollButtons();
+          loaderAnim();
         });
 
 

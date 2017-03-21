@@ -12,6 +12,14 @@ body {
 }
 
 
+a:link,
+a:active,
+a:visited,
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
 h1, h2, h3, h4, h5 {
 	font-family: $font-family-sans-serif;
 
@@ -33,15 +41,32 @@ h1, h2, h3, h4, h5 {
 }
 
 
+#loading-cover {
+	transition: transform ($transition-time / 2) ease-in-out;
+	transform: translate(0, 30px);
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	z-index: $zindex-tooltip;
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+
+	&.hello-app {
+		transform: translate(0, 0);
+	}
+}
+
+
 circle.rotate {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  stroke-width: 3px;
+  stroke-width: 30px;
   stroke: rgba(255, 255, 255, 0.25);
   fill: transparent;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
-  animation: anim-circle-border $transition-time ease-in-out infinite alternate;
+  animation: anim-circle-border ($transition-time * 3) ease-in-out infinite alternate;
 }
 
 
