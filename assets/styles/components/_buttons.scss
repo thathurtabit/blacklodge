@@ -83,11 +83,11 @@
     color: $white;
     letter-spacing: 2px;
     text-transform: uppercase;
-	
 
 	@include media-breakpoint-up(md) {
-		bottom: 40px;
+		bottom: 60px;
 	}
+
 
     span {
     	position: relative;
