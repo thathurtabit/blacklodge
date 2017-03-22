@@ -77,12 +77,18 @@
 .btn-next {
 	font-size: 10px;
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     padding: 3px 10px;
     border: 1px solid $white;
     color: $white;
     letter-spacing: 2px;
     text-transform: uppercase;
+	
+
+	@include media-breakpoint-up(md) {
+		bottom: 40px;
+	}
+
     span {
     	position: relative;
     	z-index: 2;

@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
 }
@@ -92,6 +93,12 @@
 		transform: translate(0, 30px);
 		opacity: 0;
 		font-size: 40px;
+		top: 100px;
+		position: relative;
+
+		@include media-breakpoint-up(md) {
+			top: 0;
+		}
 
 		span {
 			display: block;
@@ -165,25 +172,30 @@
 	background-image: url("../images/bg-laura-palmer.jpg");
 }
 
-.page--the-giant {
+.page--the-giant::before {
 	background-image: url("../images/bg-the-giant.jpg");
 }
 
-.page--chester-desmond {
+.page--chester-desmond::before {
 	background-image: url("../images/bg-chester-desmond.jpg");
 }
 
-.page--phillip-jefferies {
+.page--phillip-jefferies::before {
 	background-image: url("../images/bg-phillip-jefferies.jpg");
 }
 
-.page--dale-cooper {
+.page--dale-cooper::before {
 	background-image: url("../images/bg-dale-cooper.jpg");
 }
 
 .page-info-content {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 130px;
+	padding-bottom: 200px;
+
+	@include media-breakpoint-up(md) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 
 	&.bio {
 		max-width: 1200px;
@@ -219,7 +231,7 @@ cite {
 
 	@include media-breakpoint-down(sm) {
 		max-width: 200px;
-		margin: 10px auto 30px;
+		margin: 10px auto 10px;
 	}
 
 	.sps--blw & {
