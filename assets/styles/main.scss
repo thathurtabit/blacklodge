@@ -10,13 +10,14 @@
 @import "../../bower_components/bootstrap/scss/_grid.scss";
 @import "../../bower_components/bootstrap/scss/_forms.scss";
 @import "../../bower_components/bootstrap/scss/_buttons.scss";
+@import "../../bower_components/bootstrap/scss/_images.scss";
 @import "../../bower_components/bootstrap/scss/_input-group.scss";
 @import "../../bower_components/bootstrap/scss/_custom-forms.scss";
 @import "../../bower_components/bootstrap/scss/_nav.scss";
 @import "../../bower_components/bootstrap/scss/_navbar.scss";
 @import "../../bower_components/bootstrap/scss/_list-group.scss";
 @import "../../bower_components/bootstrap/scss/_tooltip.scss";
-@import "../../bower_components/bootstrap/scss/_alert.scss";
+@import "../../bower_components/bootstrap/scss/_responsive-embed.scss";
 @import "../../bower_components/bootstrap/scss/_transitions.scss";
 @import "../../bower_components/bootstrap/scss/_utilities.scss";
 // endbower
@@ -28,6 +29,7 @@
 @import "components/buttons";
 @import "components/tooltips";
 @import "components/grid";
+@import "components/modal";
 @import "layouts/header";
 @import "layouts/pages";
 @import "layouts/footer";

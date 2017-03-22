@@ -43,54 +43,48 @@
           });
         }
 
-          // You should really clean this up...
-          $('.nav-link').click(function() {
-            $('.nav-item').removeClass('active');
-            $(this).parent().addClass('active');          
-          });
+         
+        // BUTTONS AT THE BUTTON OF INFO PAGE
+        function onURLChange() {
 
-          $('.page-info--home .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-bob').addClass('active');          
-          });
+          //var getURL = window.location.pathname.split("/").pop();
+          var getURL = window.location.pathname;
+          var getURLsplit = getURL.split("/"); // split into array
+          var myPath = getURLsplit[2]; // get part of the array
 
-          $('.page-info--bob .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-mike').addClass('active');          
-          });
-
-          $('.page-info--mike .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-man').addClass('active');          
-          });
-
-          $('.page-info--the-man .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-giant').addClass('active');          
-          });
-
-          $('.page-info--the-giant .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-laura').addClass('active');          
-          });
-
-          $('.page-info--laura-palmer .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-chester').addClass('active');          
-          });
-
-          $('.page-info--chester-desmond .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-phillip').addClass('active');          
-          });
-
-          $('.page-info--phillip-jefferies .btn-next').click(function() {
-            $('.nav-item').removeClass('active');
-            $('.nav-dale').addClass('active');          
-          });
-
-
+          var currentURL = 'curr-nav-' + myPath;
         
+            //Remove all classes by default
+            $('.navbar').removeClass(function (index, css) {
+                return (css.match(/(^|\s)curr-nav\S+/g) || []).join(' ');
+            });
+            $('.navbar').addClass(currentURL);
+
+        }
+
+
+        // Open or Close the Video Modal
+        function openCloseModal() {
+
+          // SHOW & HIDE SEARCH BOX
+          $(".quote-form-open-close").click(function(){
+
+            if ($(".video-modal").hasClass("open")) {
+              $(".video-modal").removeClass("open").delay(250).hide(10);
+
+              $("iframe").each(function() { 
+                  var src= $(this).attr('src');
+                  $(this).attr('src',src);  
+              });
+
+            } else {
+              $(".video-modal").show(1).addClass("open");
+            }
+            
+          });
+
+        }
+     
         
 
         // Enable BS tooltips (if not touchscreen)
@@ -156,11 +150,13 @@
 
 
          // ====================================
-        // ON INITIAL PAGE LOAD, DO THESE THING
+        // ON INITIAL PAGE LOAD, DO THESE THING        
+        onURLChange();
         Barba.Pjax.start();
         checkImages();
         scrollSections();
         scrollButtons();
+        openCloseModal();
         Barba.Dispatcher.on('transitionCompleted', function() {
           // Scroll to the top of the current slide
           $('html, body').animate({
@@ -171,6 +167,8 @@
           scrollSections();
           scrollButtons();
           loaderAnim();
+          onURLChange();
+          openCloseModal();
         });
 
 

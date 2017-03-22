@@ -51,8 +51,8 @@
             <span class="sr-only">Scroll up</span>
           </button>
 
-          <a href="bob" class="btn-next">
-            <span>Meet:</span> Bob
+          <a href="<?php echo $root; ?>/bob" class="btn-next" goto-bob>
+            <span><strong>Meet:</strong> Bob</span>
           </a>
 
           </div>

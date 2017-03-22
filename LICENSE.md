@@ -1,4 +1,8 @@
-Copyright (c) Ben Word and Scott Walkinshaw
+This website is not affiliated with the offical Twin Peaks folks.
+
+Copyright (c) Stephen Fairbanks - Design / Front-end
+
+Copyright (c) Ben Word and Scott Walkinshaw - Original Sage bootstrap
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

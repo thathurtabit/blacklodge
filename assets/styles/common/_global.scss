@@ -11,6 +11,9 @@ body {
 	}
 }
 
+img {
+	@extend .img-fluid;
+}
 
 a:link,
 a:active,
@@ -28,7 +31,9 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
-
+.container-fluid {
+	width: 100%; // just in case Flex is messing this up
+}
 
 .main-content {
 	margin-top: $navbar-height;
@@ -42,9 +47,10 @@ h1, h2, h3, h4, h5 {
 
 
 #loading-cover {
-	transition: transform ($transition-time / 2) ease-in-out;
+	transition: transform ($transition-time / 2) ease-in-out, opacity ($transition-time / 2) ease-in-out;
 	transform: translate(0, 30px);
 	position: fixed;
+	opacity: 1;
 	top: 20%;
 	left: 50%;
 	z-index: $zindex-tooltip;
@@ -54,6 +60,7 @@ h1, h2, h3, h4, h5 {
 
 	&.hello-app {
 		transform: translate(0, 0);
+		opacity: 0;
 	}
 }
 

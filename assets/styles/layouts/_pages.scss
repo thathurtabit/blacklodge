@@ -6,7 +6,7 @@
     justify-content: center;
     background-size: cover;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .page h1 {
@@ -183,6 +183,10 @@
 .page-info-content {
 	padding-top: 30px;
 	padding-bottom: 30px;
+
+	&.bio {
+		max-width: 1200px;
+	}
 }
 
 
@@ -204,5 +208,134 @@ cite {
 	font-family: $font-family-serif;
 	color: $gray;
 	font-style: normal;
+}
+
+.bio-img-col {
+	transition: transform $transition-time ease-in-out, opacity $transition-time ease-in-out;
+	transition-delay: $transition-time + 0.2;
+	opacity: 0;
+	transform: translate(-20px, 0);
+
+	@include media-breakpoint-down(sm) {
+		max-width: 200px;
+		margin: 10px auto 30px;
+	}
+
+	.sps--blw & {
+		transition-delay: $transition-time;
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+.bio-img {
+	transition: filter $transition-time ease-in-out;
+	border-radius: 100%;
+	margin-bottom: 30px;
+	filter: invert(0);
+}
+
+.img-info-link {
+	display: block;
+	position: relative;
+	background: transparent;
+	border: 0;
+	outline: none !important;
+
+	&::before,
+	&::after {		
+		content: "";
+		transition: opacity $transition-time ease-in-out, transform $transition-time ease-in-out;
+		transition-delay: $transition-time * 2;
+		transform: translate(0,20px);
+		opacity: 0;
+		z-index: 1;
+
+		.sps--blw & {
+			opacity: 1;
+			transform: translate(0,0);
+		}
+	}
+
+	&::before {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		bottom: 15px;
+		border-radius: 100%;
+		background: $brand-primary;
+		left: 50%;
+		margin-left: -15px;
+		animation: shadow-pulse 2s ease-in-out infinite;
+		transform-origin: 50% 50%;
+	}
+
+	&::after {
+		width: 0;
+		height: 0;
+		position: absolute;
+		left: 50%;
+		margin-left: -2px;
+		bottom: 25px;
+		border-width: 5px;
+		border-style: solid;
+		display: block;
+		border-color: transparent transparent transparent rgba(255,255,255,0.5);
+	}
+
+	&:hover {
+		cursor: pointer;
+		
+		img {
+			filter: invert(1);
+		}
+	}
+}
+
+// Shadow Pulse
+// Animation keyframes
+@keyframes shadow-pulse {
+    0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.2);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+
+
+// DL Row
+.text-col dl {
+	@extend .row;
+	@extend .no-gutters;
+	margin-bottom: 5px;
+}
+
+// DT title
+.text-col dt {
+	@extend .col-2;
+	text-transform: uppercase;
+	text-align: right;
+	color: $gray;
+	margin-right: 10px;
+	font-size: 10px;
+    line-height: 21px;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+		font-size: 11px;
+		letter-spacing: 1px;
+		line-height: 21px;
+    }
+}
+
+// DD Fefinition
+.text-col dd {
+	@extend .col-9;
+	font-size: 13px;
+	margin: 0;
 }
 

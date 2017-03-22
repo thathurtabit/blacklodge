@@ -1,0 +1,35 @@
+.video-modal {
+	display: none; // Hide by default, use JS to bring it to the DOM
+	transition: opacity $transition-time ease-out;
+	opacity: 0;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 100%;
+	background: rgba(0,0,0,0.95);
+	padding-top: 100px;
+	padding-bottom: 100px;
+	z-index: $zindex-tooltip + 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&.open {
+		left: 10px;
+		opacity: 1;
+	}
+}
+
+.video-modal::before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	position: absolute;
+	top: 35px;
+	left: 35px;
+	background: url(../images/logo-white.svg) no-repeat;
+
+}

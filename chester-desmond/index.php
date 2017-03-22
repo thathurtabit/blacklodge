@@ -21,16 +21,62 @@
     </div>
     <div id="page-info" class="page-info page-info--chester-desmond sps">
             
-     <h2><span>Meet Special Agent</span>Chester Desmond</h2>
+     <h2><span>Meet Special Agent </span>Chester Desmond</h2>
+
+     <div class="page-info-content bio container-fluid">
+       <div class="row">
+          <div class="col-sm-2 offset-md-2 text-col bio-img-col">
+            <button class="img-info-link quote-form-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
+              <img src="<?php echo $root; ?>/dist/images/info-chester.jpg" alt="Black Lodge: Chester Desmond" class="bio-img">
+            </button>
+          </div>
+
+          <div class="col-sm-6 text-col">
+            <dl>
+              <dt>Name:</dt>
+              <dd>Chester Desmond</dd>
+            </dl>
+
+            <dl>
+              <dt>From:</dt>
+              <dd>Fargo, North Dakota</dd>
+            </dl>
+
+            <dl>
+              <dt>Likes:</dt>
+              <dd>Coffee</dd>
+            </dl>
+
+            <dl>
+              <dt>Dislikes:</dt>
+              <dd>Rudeness, time wasters</dd>
+            </dl>
+            
+            <dl>
+              <dt>Bio:</dt>
+              <dd>Federal Bureau of Investigation Special Agent Chester "Chet" Desmond was called out by Regional Bureau Chief Gordon Cole to investigate the murder of a 17-year-old girl named Teresa Banks, who was found wrapped in plastic. Special Agent Dale Cooper investigated his disappearance and found Desmond's car with the words "Let's rock" scrawled across the windshield. <a href="http://twinpeaks.wikia.com/wiki/Chester_Desmond" title="Source" target="_blank" class="btn-info-ext">Src</a></dd>
+            </dl>
+          </div>
+       </div>
+
+     </div>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
 
-      <a href="<?php echo $root; ?>/phillip-jefferies" class="btn-next">
-        <span>Meet:</span> Phillip Jefferies
+      <a href="<?php echo $root; ?>/phillip-jefferies" class="btn-next" goto-man>
+        <span><strong>Meet:</strong> Phillip Jefferies</span>
       </a>
 
+    </div>
+
+    <div class="video-modal">
+      <button class="btn-close-video quote-form-open-close"><span class="sr-only">Close video</span>X</button>
+      <!-- 16:9 aspect ratio -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/sEl8hw7tdwg?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+      </div>
     </div>
   </div>
 </div>

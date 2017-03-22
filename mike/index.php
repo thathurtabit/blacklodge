@@ -23,14 +23,61 @@
             
      <h2><span>Meet</span>Mike</h2>
 
+
+     <div class="page-info-content bio container-fluid">
+       <div class="row">
+          <div class="col-sm-2 offset-md-2 text-col bio-img-col">
+            <button class="img-info-link quote-form-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
+              <img src="<?php echo $root; ?>/dist/images/info-mike.jpg" alt="Black Lodge: Mike" class="bio-img">
+            </button>
+          </div>
+
+          <div class="col-sm-6 text-col">
+            <dl>
+              <dt>Name:</dt>
+              <dd>Mike</dd>
+            </dl>
+
+            <dl>
+              <dt>From:</dt>
+              <dd>An alternative plane of reality</dd>
+            </dl>
+
+            <dl>
+              <dt>Likes:</dt>
+              <dd>Shoes, Religion, Stopping Bob</dd>
+            </dl>
+
+            <dl>
+              <dt>Dislikes:</dt>
+              <dd>Tattoos, Left Arms</dd>
+            </dl>
+            
+            <dl>
+              <dt>Bio:</dt>
+              <dd>MIKE is a spirit who can inhabit a human host, similar to BOB, who was his partner in serial murder. After committing several rape/murders with BOB, MIKE claims to have had a religious epiphany and repented, cutting off his own arm to rid himself of a "FIRE WALK WITH ME" tattoo, which symbolized being touched by "the devilish one". BOB, however, would not repent. MIKE has spent years trying to find and stop BOB. He currently inhabits shoe salesman Philip Michael Gerard. <a href="http://twinpeaks.wikia.com/wiki/MIKE" title="Source" target="_blank" class="btn-info-ext">Src</a></dd>
+            </dl>
+          </div>
+       </div>
+
+     </div>
+
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
 
-      <a href="<?php echo $root; ?>/man-from-another-place" class="btn-next">
-        <span>Meet:</span> Man from Another Place
+      <a href="<?php echo $root; ?>/man-from-another-place" class="btn-next" goto-man>
+        <span><strong>Meet:</strong> The Man from Another Place</span>
       </a>
 
+    </div>
+
+    <div class="video-modal">
+      <button class="btn-close-video quote-form-open-close"><span class="sr-only">Close video</span>X</button>
+      <!-- 16:9 aspect ratio -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/kIzimmrDtTg?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+      </div>
     </div>
   </div>
 </div>
