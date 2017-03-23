@@ -23,7 +23,6 @@
         // JavaScript to be fired on all pages
 
         function loaderAnim() {
-          //$('#loading-cover').show().delay(50).queue(function(next) { $(this).addClass("hello-app"); next(); }).delay(50).fadeOut('250',function(){$(this);});
           $('#loading-cover').show();
         }
 
@@ -50,8 +49,7 @@
           //var getURL = window.location.pathname.split("/").pop();
           var getURL = window.location.pathname;
           var getURLsplit = getURL.split("/"); // split into array
-          var myPath = getURLsplit[2]; // get part of the array
-
+          var myPath = getURLsplit[1]; // get part of the array
           var currentURL = 'curr-nav-' + myPath;
         
             //Remove all classes by default
@@ -61,6 +59,11 @@
             $('.navbar').addClass(currentURL);
 
         }
+
+        // Collapse this nav when clicked
+        $('.nav-link').click(function() {
+          $('#navbarToggler').collapse('hide');
+        });
 
 
         // Open or Close the Video Modal

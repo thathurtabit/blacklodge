@@ -1,5 +1,6 @@
 <?php
   // HEADER
+  $pageName = 'Mike | ';
   $myPath = '../';
   include_once('../dist/includes/header.inc.php');
 ?>
@@ -26,7 +27,7 @@
 
      <div class="page-info-content bio container-fluid">
        <div class="row">
-          <div class="col-md-2 offset-md-2 text-col bio-img-col">
+          <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
             <button class="img-info-link quote-form-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
               <img src="<?php echo $root; ?>/dist/images/info-mike.jpg" alt="Black Lodge: Mike" class="bio-img">
             </button>

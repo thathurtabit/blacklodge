@@ -14,17 +14,17 @@
   <link rel="mask-icon" href="<?php echo $myPath; ?>dist/images/safari-pinned-tab.svg" color="#1f2021">
   <meta name="theme-color" content="#1f2021">
   
-  <title>Black Lodge - It will utterly annihilate your soul.</title>
+  <title><?php echo $pageName; ?>The Black Lodge - It will utterly annihilate your soul | An ode to Twin Peaks</title>
 
   <link rel="canonical" href="http://blacklodge.me">
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Black Lodge">
-  <meta property="og:description" content="Black Lodge - It will utterly annihilate your soul.">
+  <meta property="og:description" content="<?php echo $pageName; ?>The Black Lodge - It will utterly annihilate your soul | An ode to Twin Peaks">
   <meta property="og:url" content="http://blacklodge.me">
   <meta property="og:site_name" content="Black Lodge">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Black Lodge - It will utterly annihilate your soul.">
+  <meta name="twitter:description" content="<?php echo $pageName; ?>The Black Lodge - It will utterly annihilate your soul | An ode to Twin Peaks">
   <meta name="twitter:title" content="Black Lodge">
 </head>
 

@@ -1,5 +1,6 @@
 <?php
   // HEADER
+  $pageName = '';
   $myPath = '';
   include_once('dist/includes/header.inc.php');
 ?>
@@ -14,7 +15,7 @@
         <div class="barba-container">
           <div id="page-cover" class="page page--home">
             
-           <h1>Black Lodge</h1>
+           <h1><span>The </span>Black Lodge</h1>
            <h2>It will utterly annihilate your soul</h2>
 
            <button class="btn-scroll btn-scroll--down">
