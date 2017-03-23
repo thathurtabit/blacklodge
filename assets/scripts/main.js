@@ -160,12 +160,20 @@
         scrollSections();
         scrollButtons();
         openCloseModal();
-        Barba.Dispatcher.on('transitionCompleted', function() {
+        Barba.Dispatcher.on('linkClicked', function() {
           // Scroll to the top of the current slide
-          $('html, body').animate({
-              scrollTop: ($('#page-cover').offset().top)
-          },500);
+
+          $(".barba-container").fadeOut(250, function(){
+                $('html,body').scrollTop(0);
+            });
+          // $('html, body').animate({
+          //     scrollTop: ($('#page-cover').offset().top)
+          // },500);
+        });
+        Barba.Dispatcher.on('transitionCompleted', function() {
           // Make sure the scroll spy is working on new slide
+
+          $(".barba-container").fadeIn(50);
           ScrollPosStyler.init();
           scrollSections();
           scrollButtons();
