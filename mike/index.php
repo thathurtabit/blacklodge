@@ -28,7 +28,7 @@
      <div class="page-info-content bio container-fluid">
        <div class="row">
           <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
-            <button class="img-info-link quote-form-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
+            <button class="img-info-link video-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
               <img src="<?php echo $root; ?>/dist/images/info-mike.jpg" alt="Black Lodge: Mike" class="bio-img">
             </button>
           </div>
@@ -74,16 +74,24 @@
     </div>
 
     <div class="video-modal">
-      <button class="btn-close-video quote-form-open-close"><span class="sr-only">Close video</span>X</button>
+      <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
       <!-- 16:9 aspect ratio -->
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="https://www.youtube.com/embed/kIzimmrDtTg?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
       </div>
     </div>
+
+    <?php
+      // CHARACTER MENU
+      include('../dist/includes/character-menu.inc.php');
+    ?>
+    
   </div>
 </div>
 
-
+<button class="characters-open-close btn-open-modal">
+    <span class="sr-only">View characters</span>OPEN
+</button>
 <?php
   // FOOTER
   include_once('../dist/includes/footer.inc.php');

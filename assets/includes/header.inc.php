@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,10 +20,11 @@
   <link rel="canonical" href="http://blacklodge.me">
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Black Lodge">
+  <meta property="og:title" content="The Black Lodge">
   <meta property="og:description" content="<?php echo $pageName; ?>The Black Lodge - It will utterly annihilate your soul | An ode to Twin Peaks">
   <meta property="og:url" content="http://blacklodge.me">
-  <meta property="og:site_name" content="Black Lodge">
+  <meta property="og:site_name" content="The Black Lodge">
+  <meta property="og:image" content="http://blacklodge.me/dist/images/og.png" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:description" content="<?php echo $pageName; ?>The Black Lodge - It will utterly annihilate your soul | An ode to Twin Peaks">
   <meta name="twitter:title" content="Black Lodge">

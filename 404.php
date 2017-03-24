@@ -27,10 +27,15 @@
           <a href="<?php echo $root; ?>/" class="btn-next" goto-bob>
             <span><strong>Meet:</strong> The Black Lodge</span>
           </a>
+
+          <?php
+            // CHARACTER MENU
+            include('dist/includes/character-menu.inc.php');
+          ?>
         </div>
       </main><!-- /.main -->
                                      
-      
+
 <?php
   // FOOTER
   include_once('dist/includes/footer.inc.php');

@@ -27,7 +27,7 @@
      <div class="page-info-content bio container-fluid">
        <div class="row">
           <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
-            <button class="img-info-link quote-form-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
+            <button class="img-info-link video-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
               <img src="<?php echo $root; ?>/dist/images/info-bob.jpg" alt="Black Lodge: Bob" class="bio-img">
             </button>
           </div>
@@ -74,7 +74,7 @@
 
 
     <div class="video-modal">
-      <button class="btn-close-video quote-form-open-close"><span class="sr-only">Close video</span>X</button>
+      <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
       <!-- 16:9 aspect ratio -->
 
       <div class="embed-responsive embed-responsive-16by9">
@@ -82,10 +82,13 @@
       </div>
     </div>
 
+    <?php
+      // CHARACTER MENU
+      include('../dist/includes/character-menu.inc.php');
+    ?>
 
   </div>
 </div>
-
 
 <?php
   // FOOTER

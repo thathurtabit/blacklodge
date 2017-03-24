@@ -57,7 +57,7 @@
                 return (css.match(/(^|\s)curr-nav\S+/g) || []).join(' ');
             });
             $('.navbar').addClass(currentURL);
-
+             
         }
 
         // Collapse this nav when clicked
@@ -70,10 +70,13 @@
         function openCloseModal() {
 
           // SHOW & HIDE SEARCH BOX
-          $(".quote-form-open-close").click(function(){
+          $(".video-open-close").click(function(){
+            // Set var
+            var videoModal = $(".video-modal");
 
-            if ($(".video-modal").hasClass("open")) {
-              $(".video-modal").removeClass("open").delay(250).hide(10);
+            if (videoModal.is(':visible') || videoModal.hasClass("open")) {
+              
+              videoModal.removeClass("open").delay(250).hide(10);
 
               $("iframe").each(function() { 
                   var src= $(this).attr('src');
@@ -81,7 +84,28 @@
               });
 
             } else {
-              $(".video-modal").show(1).addClass("open");
+              videoModal.show(1).addClass("open");
+            }
+            
+          });
+
+        }
+
+
+        // Open or Close Character Overlay screen
+        function openCloseCharacterOverlay() {
+          // Set var
+          var characterModal = $(".characters-modal");
+
+          // SHOW & HIDE SEARCH BOX
+          $(".characters-open-close").click(function(){
+
+            if (characterModal.is(':visible') || characterModal.hasClass("open")) {
+              
+              characterModal.removeClass("open").delay(250).hide(10);
+
+            } else {
+              characterModal.show(1).addClass("open");
             }
             
           });
@@ -132,6 +156,10 @@
               $('#loading-cover').addClass("hello-app").delay(50).fadeOut('250');
               $('.barba-container').addClass('loaded');
             });
+
+            $('.characters-modal').imagesLoaded( { background: true }, function() {
+              $('.barba-container').addClass('loaded-links');
+            });
         }
 
         // LOAD WEB FONTS
@@ -160,19 +188,16 @@
         scrollSections();
         scrollButtons();
         openCloseModal();
+        openCloseCharacterOverlay();
         Barba.Dispatcher.on('linkClicked', function() {
           // Scroll to the top of the current slide
-
           $(".barba-container").fadeOut(250, function(){
                 $('html,body').scrollTop(0);
-            });
-          // $('html, body').animate({
-          //     scrollTop: ($('#page-cover').offset().top)
-          // },500);
+          });
+
         });
         Barba.Dispatcher.on('transitionCompleted', function() {
           // Make sure the scroll spy is working on new slide
-
           $(".barba-container").fadeIn(50);
           ScrollPosStyler.init();
           scrollSections();
@@ -180,6 +205,7 @@
           loaderAnim();
           onURLChange();
           openCloseModal();
+          openCloseCharacterOverlay();
         });
 
 

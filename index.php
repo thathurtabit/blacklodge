@@ -57,10 +57,16 @@
           </a>
 
           </div>
+
+          <?php
+            // CHARACTER MENU
+            include('dist/includes/character-menu.inc.php');
+          ?>
+
         </div>
       </main><!-- /.main -->
                                      
-      
+
 <?php
   // FOOTER
   include_once('dist/includes/footer.inc.php');

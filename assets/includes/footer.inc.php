@@ -1,9 +1,3 @@
-<div id="loading-cover">
-	<svg class="circle-bg" viewBox="0 0 200 200">
-		<circle class="rotate" cx="100" cy="100" r="50"></circle>
-	</svg>
-</div>
-
 <footer class="content-info">
   <a href="http://ghosthorses.co.uk" target="_blank" class="site-by" data-animation="false" data-toggle="tooltip" data-placement="left" title="By Ghosthorses.co.uk"><span class="sr-only">Websiste by Ghosthorses.co.uk</span>
 

@@ -31,7 +31,11 @@
 }
 
 .btn-scroll--down {
-	bottom: 40px;	
+	bottom: 80px;
+
+	@include media-breakpoint-up(md) {
+		bottom: 40px;
+	}
 
 	&::before {
 		border-color: transparent rgba(255,255,255,0.5) rgba(255,255,255,0.5) transparent;
@@ -53,7 +57,11 @@
 
 
 .btn-scroll--up {
-	top: 40px;
+	top: 80px;
+
+	@include media-breakpoint-up(md) {
+		top: 40px;
+	}
 
 	&::before {
 		border-color: rgba(255,255,255,0.5) transparent transparent rgba(255,255,255,0.5);
@@ -144,7 +152,9 @@
 }
 
 
-.btn-close-video {
+.btn-close-video,
+.btn-close-modal,
+.btn-open-modal {
 	transition: background-color $transition-time ease-in-out;
 	width: 40px;
 	height: 40px;
@@ -159,9 +169,42 @@
 	text-align: center;
 	line-height: 40px;
 	cursor: pointer;
+	z-index: $zindex-modal;
 
 	&:hover {
 		background-color: $gray-dark;
 	}
 }
 
+.btn-open-modal {
+	display: none; // hide on small screens
+
+	@include media-breakpoint-up(md) {
+		display: block;
+		position: fixed;
+		z-index: $zindex-modal - 1;
+		background-color: transparent;
+
+		&:hover {
+			background-color: $brand-primary;
+			animation: shadow-pulse 2s ease-in-out infinite;
+			transform-origin: 50% 50%;
+
+			.btn-bar {
+				transform: rotate(90deg);	
+			}
+		}
+	}
+}
+
+.btn-bar {
+	transition: transform $transition-time $transition-bez;
+	position: absolute;
+	height: 0px;
+	border-top: 4px dotted $white;
+	width: 20px;
+	left: 50%;
+	top: 50%;
+	margin-top: -2px;
+	margin-left: -10px;
+}
