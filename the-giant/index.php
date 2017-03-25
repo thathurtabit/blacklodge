@@ -30,7 +30,9 @@
        <div class="row">
           <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
             <button class="img-info-link video-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
-              <img src="<?php echo $root; ?>/dist/images/info-giant.jpg" alt="Black Lodge: The Giant" class="bio-img">
+              <span>
+                <img src="<?php echo $root; ?>/dist/images/info-giant.jpg" alt="Black Lodge: The Giant" class="bio-img" />
+              </span>
             </button>
           </div>
 

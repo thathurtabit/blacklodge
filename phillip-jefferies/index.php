@@ -28,7 +28,9 @@
        <div class="row">
           <div class="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
             <button class="img-info-link video-open-close" data-animation="false" data-toggle="tooltip" data-placement="right" title="View video">
-              <img src="<?php echo $root; ?>/dist/images/info-phillip.jpg" alt="Black Lodge: Phillip Jefferies" class="bio-img">
+              <span>
+                <img src="<?php echo $root; ?>/dist/images/info-phillip.jpg" alt="Black Lodge: Phillip Jefferies" class="bio-img">
+              </span>
             </button>
           </div>
 
