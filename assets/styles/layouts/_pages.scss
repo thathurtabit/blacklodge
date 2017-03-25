@@ -110,6 +110,63 @@
     position: relative;
 }
 
+
+.page-info::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 25vw;
+	font-family: $font-family-sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $black;
+	opacity: 0.1;
+	z-index: 1;
+	text-align: center;
+    line-height: 0.95;
+}
+
+.page-info.page-info--home::before {
+	content: "Black Lodge";
+}
+
+.page-info.page-info--bob::before {
+	content: "Bob";
+}
+
+.page-info.page-info--mike::before {
+	content: "Mike";
+}
+
+.page-info.page-info--man::before {
+	content: "The Man from Another Place";
+}
+
+.page-info.page-info--the-giant::before {
+	content: "The Giant";
+}
+
+.page-info.page-info--laura-palmer::before {
+	content: "Laur Palmer";
+}
+
+.page-info.page-info--chester-desmond::before {
+	content: "Chester Desmond";
+}
+
+.page-info.page-info--phillip-jefferies::before {
+	content: "Phillip Jefferies";
+}
+
+.page-info.page-info--dale-cooper::before {
+	content: "Dale Cooper";
+}
+
 // TRANSITIONS FOR PAGE INFO
 .sps {
 	h2 {
@@ -122,10 +179,13 @@
 		position: relative;
 		padding-left: 20px;
 		padding-right: 20px;
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	    border-radius: 5px;
 		background-color: $gray-darker;
 
 		@include media-breakpoint-up(md) {
-			top: 0;
+			top: 10px;
 		}
 
 		span {
@@ -259,6 +319,7 @@
 
 .svg-content-border-wrap {
 	display: none;
+	z-index: 2;
 
 	.page-info--home & {
 		left: 12.5%;
@@ -308,7 +369,7 @@
 .text-col,
 .text-center {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 .text-col {
