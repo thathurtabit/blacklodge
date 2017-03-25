@@ -61,12 +61,21 @@
             </dl>
           </div>
        </div>
+       <div class="svg-content-border-wrap">
+         <svg class="svg-content-border">
+            <rect width="100%" height="100%" />
+          </svg>
+        </div>
 
      </div>
 
      <button class="btn-scroll btn-scroll--up">
         <span class="sr-only">Scroll up</span>
       </button>
+
+      <a href="http://www.sho.com/twin-peaks" target="_blank" class="btn-next">
+        <span><strong>Visit:</strong> Official Twin Peaks</span>
+      </a>
      
 
     </div>
