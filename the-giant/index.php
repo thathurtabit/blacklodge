@@ -23,7 +23,7 @@
     </div>
     <div id="page-info" class="page-info page-info--the-giant sps">
             
-     <h2><span>Meet</span>The Giant</h2>
+     <h2><i class="zigzag-long"></i><span>Meet</span>The Giant</h2>
 
 
      <div class="page-info-content bio container-fluid">
@@ -83,10 +83,12 @@
     </div>
 
     <div class="video-modal">
-      <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
-      <!-- 16:9 aspect ratio -->
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe src="https://www.youtube.com/embed/pWa0dZMHYeE?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+      <div class="video-modal-inner">
+        <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/pWa0dZMHYeE?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+        </div>
       </div>
     </div>
 

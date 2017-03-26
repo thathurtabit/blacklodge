@@ -22,7 +22,7 @@
     </div>
     <div id="page-info" class="page-info page-info--dale-cooper sps">
             
-     <h2><span>Meet </span>Dale Cooper</h2>
+     <h2><i class="zigzag-long"></i><span>Meet </span>Dale Cooper</h2>
 
      <div class="page-info-content bio container-fluid">
        <div class="row">
@@ -81,10 +81,12 @@
     </div>
 
     <div class="video-modal">
-      <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
-      <!-- 16:9 aspect ratio -->
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe src="https://www.youtube.com/embed/5CREjFZ4TmA?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+      <div class="video-modal-inner">
+        <button class="btn-close-video video-open-close"><span class="sr-only">Close video</span>X</button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/5CREjFZ4TmA?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
+        </div>
       </div>
     </div>
 

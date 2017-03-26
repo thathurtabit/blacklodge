@@ -25,7 +25,7 @@
           </div>
           <div id="page-info" class="page-info page-info--home sps">
             
-           <h2><span>Welcome to</span> The Black Lodge</h2>
+           <h2><i class="zigzag-long"></i><span>Welcome to</span> The Black Lodge</h2>
           
           <div class="page-info-content container-fluid">
              <div class="row">

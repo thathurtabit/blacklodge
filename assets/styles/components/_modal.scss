@@ -9,12 +9,9 @@
 	bottom: 10px;
 	left: 10px;
 	background: rgba(0,0,0,0.95);
-	padding-top: 100px;
-	padding-bottom: 100px;
+	
 	z-index: $zindex-tooltip + 1;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
 
 	&.open {
 		display: flex;
@@ -35,6 +32,21 @@
 	background: url(../images/logo-white.svg) no-repeat;
 
 }
+
+.video-modal-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
 
 
 .characters-modal {

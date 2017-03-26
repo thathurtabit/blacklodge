@@ -80,6 +80,9 @@
 	}
 }
 
+
+
+
 // When scrolled onto
 .page.sps--abv h1 {
 	transform: translate(0, 0);
@@ -370,6 +373,59 @@
 	}
 }
 
+.svg-content-border-wrap::before {
+	transition: opacity $transition-time ease-in-out;
+	transition-delay: $transition-time + 2;
+	content: "";
+	width: 35px;
+	height: 46px;
+	background: url(../images/icons.png) no-repeat;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	opacity: 0;
+	margin-left: -17px;
+	animation: icon-move 7.5s $transition-bez alternate infinite;
+	animation-delay: $transition-time;
+
+	.sps--blw & {
+		opacity: 0.25;
+	}
+}
+
+
+// Shadow Pulse
+// Animation keyframes
+@keyframes icon-move {
+  0 {
+  	opacity: 0.25;
+    background-position: 0 0;
+  }
+  30% {
+  	opacity: 0.25;
+  	background-position: 0 -46px;
+  }
+  50%{
+  	opacity: 0.25;
+  	background-position: 0 -92px;
+  }
+  70% {
+  	opacity: 0.25;
+  	background-position: 0 -138px;
+  }
+  85% {
+  	opacity: 0.25;
+  	background-position: 0 -184px;
+  }
+  100% {
+  	opacity: 0.25;
+  	background-position: 0 -230px;
+  }
+}
+
+
+
+
 .svg-content-border {
 	position: absolute;
 	width: 100%;
@@ -587,3 +643,41 @@ cite {
 	margin: 0;
 }
 
+
+// Zigzag
+.zigzag-long {
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    margin-left: -25px;
+    bottom: -5px;
+    left: 50%;
+    overflow: hidden;
+    background: url('../images/zigzag-long.png') repeat-x;
+    animation: zigzag-bg-anim 12s linear infinite;
+}
+
+@keyframes zigzag-bg-anim {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -215px 0;
+  }
+}
+
+
+.page.sps--abv h2 .zigzag-long {
+	bottom: -30px;
+	animation: zigzag-bg-anim-rev 12s linear infinite;
+}
+
+
+@keyframes zigzag-bg-anim-rev {
+  from {
+    background-position: -215px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
