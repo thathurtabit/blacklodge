@@ -12,7 +12,7 @@
   ?>
 
   <div class="barba-container">
-    <div id="page-cover" class="page page--dale-cooper">
+    <div id="page-cover" class="page page--dale-cooper sps">
       <h1><span>Special Agent</span> Dale Cooper</h1>
       <h2>This is - excuse me - a damn fine cup of coffee</h2>
 

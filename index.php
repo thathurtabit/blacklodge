@@ -13,7 +13,7 @@
         ?>
 
         <div class="barba-container">
-          <div id="page-cover" class="page page--home">
+          <div id="page-cover" class="page page--home sps">
             
            <h1><span>The </span>Black Lodge</h1>
            <h2>It will utterly annihilate your soul</h2>

@@ -13,7 +13,7 @@
   ?>
 
   <div class="barba-container">
-    <div id="page-cover" class="page page--the-giant">
+    <div id="page-cover" class="page page--the-giant sps">
       <h1>The Giant</h1>
       <h2>It is happening... again</h2>
 

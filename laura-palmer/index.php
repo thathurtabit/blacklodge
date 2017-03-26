@@ -12,7 +12,7 @@
   ?>
 
   <div class="barba-container">
-    <div id="page-cover" class="page page--laura-palmer">
+    <div id="page-cover" class="page page--laura-palmer sps">
       <h1>Laura Palmer</h1>
       <h2>Sometimes my arms bend back</h2>
 

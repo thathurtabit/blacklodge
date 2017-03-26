@@ -13,7 +13,7 @@
         ?>
 
         <div class="barba-container">
-          <div id="page-cover" class="page page--home">
+          <div id="page-cover" class="page page--home sps">
             
            <h1>404</h1>
            <h2>What the hell kind of two-bit operation they running out of this treehouse, Cooper? </h2>

@@ -12,7 +12,7 @@
   ?>
 
   <div class="barba-container">
-    <div id="page-cover" class="page page--mike">
+    <div id="page-cover" class="page page--mike sps">
       <h1>Mike</h1>
       <h2>Fire... walk with me</h2>
 

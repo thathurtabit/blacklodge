@@ -12,7 +12,7 @@
   ?>
 
   <div class="barba-container">
-    <div id="page-cover" class="page page--chester-desmond">
+    <div id="page-cover" class="page page--chester-desmond sps">
       <h1><span>Special Agent</span> Chester Desmond</h1>
       <h2>Her face had a sour look on it</h2>
 
