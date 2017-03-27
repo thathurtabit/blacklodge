@@ -173,7 +173,7 @@
 }
 
 .nav-overlay-link {
-	transition: background ($transition-time / 2) ease-in-out;
+	transition: background ($transition-time / 2) ease-in-out, letter-spacing ($transition-time / 2) ease-in-out;
 	position: absolute;
 	margin: 0;
 	padding: 0;
@@ -181,6 +181,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	letter-spacing: 0;
 	color: $white;
 	display: flex;
 	flex-direction: column;
@@ -201,6 +202,7 @@
 	&:hover {
 		color: $white;
 		background: rgba(0,0,0,0.5);
+		letter-spacing: 3px;
 
 		&::after {
 			width: 40px;

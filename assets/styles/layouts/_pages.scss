@@ -54,10 +54,11 @@
 }
 
 .page h1 {
-	transition: transform $transition-time ease-in-out, opacity $transition-time ease-in-out;
+	transition: transform $transition-time ease-in-out, opacity $transition-time ease-in-out, letter-spacing $transition-time ease-in-out;
 	transform: translate(0, 20px);
 	opacity: 0;
 	font-size: 15vw;
+	letter-spacing: -20px;
 
 	@include media-breakpoint-down(sm) {
 		font-size: 20vw;
@@ -87,6 +88,7 @@
 .page.sps--abv h1 {
 	transform: translate(0, 0);
 	opacity: 1;
+	letter-spacing: 0;
 
 	span {
 		transform: translate(0, 0);
@@ -149,6 +151,8 @@
 
 
 .page-info::before {
+	transition: opacity $transition-time ease-out, letter-spacing $transition-time $transition-bez;
+	transition-delay: $transition-time;
 	content: "";
 	position: absolute;
 	top: 0;
@@ -162,7 +166,8 @@
 	align-items: center;
 	justify-content: center;
 	color: $black;
-	opacity: 0.1;
+	opacity: 0;
+	letter-spacing: -5px;
 	z-index: 1;
 	text-align: center;
     line-height: 0.95;
@@ -232,8 +237,14 @@
 		}
 	}
 
+
+
 	// WHEN IN VIEW
 	&.sps--blw {
+		&::before {
+			opacity: 0.1;
+			letter-spacing: 0;
+		}
 		h2 {
 			transform: translate(0, 0);
 			opacity: 1;
@@ -242,18 +253,18 @@
 }
 
 
-.page--home {
-	.page-ready & {
-		h1 {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-		h1 span {
-			transform: translate(0, 0);
-			opacity: 0.5;
-		}
-	}
-}
+// .page--home {
+// 	.page-ready & {
+// 		h1 {
+// 			transform: translate(0, 0);
+// 			opacity: 1;
+// 		}
+// 		h1 span {
+// 			transform: translate(0, 0);
+// 			opacity: 0.5;
+// 		}
+// 	}
+// }
 
 .page::before{
 	content: "";
@@ -345,13 +356,11 @@
 }
 
 .page-info-content::before {
-	//content: "";
 	position: absolute;
 	top: -35px;
     left: 25%;
     right: 15%;
     bottom: -10px;
-    //border: 1px solid $white;
 }
 
 .svg-content-border-wrap {
