@@ -253,19 +253,6 @@
 }
 
 
-// .page--home {
-// 	.page-ready & {
-// 		h1 {
-// 			transform: translate(0, 0);
-// 			opacity: 1;
-// 		}
-// 		h1 span {
-// 			transform: translate(0, 0);
-// 			opacity: 0.5;
-// 		}
-// 	}
-// }
-
 .page::before{
 	content: "";
 	transition: opacity $transition-time ease-in-out, transform ($transition-time * 30) ease-out;
