@@ -47,10 +47,6 @@
     width: $navbar-height;
     height: $navbar-height;
     outline: none !important;
-
-    &:hover .navbar-toggler-bar::before {		
-		transform: rotate(0deg);
-	}
 }
 
 .navbar-toggler-bar,
@@ -66,7 +62,6 @@
 }
 
 .collapsed .navbar-toggler-bar::before {
-	transition: transform $transition-time ease-in-out;
 	content: "";
 	transform: rotate(90deg);
 }
