@@ -795,8 +795,8 @@ $badge-pill-border-radius: 10rem !default;
 
 // Modals
 
-// Padding applied to the modal body
-$modal-inner-padding: 15px !default;
+// Padding applied to the modal body (use rem so it can be combined with other rem-based spacings)
+$modal-inner-padding: 0.9375rem !default;
 
 $modal-dialog-margin: 10px !default;
 $modal-dialog-sm-up-margin-y: 30px !default;
