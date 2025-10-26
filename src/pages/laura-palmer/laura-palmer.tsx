@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 
 export const LauraPalmer = () => {
   const [isReady, setIsReady] = useState(false);
+  const { smoothScrollFromAnchor } = useSmoothScroll();
 
   useEffect(() => {
     setIsReady(true);
@@ -17,9 +19,13 @@ export const LauraPalmer = () => {
         <h1>Laura Palmer</h1>
         <h2>Sometimes my arms bend back</h2>
 
-        <button className="btn-scroll btn-scroll--down">
+        <a
+          href="#page-info"
+          onClick={smoothScrollFromAnchor}
+          className="btn-scroll btn-scroll--down"
+        >
           <span className="sr-only">Scroll down</span>
-        </button>
+        </a>
       </div>
       <div id="page-info" className="page-info page-info--laura-palmer sps">
         <h2>
@@ -96,9 +102,13 @@ export const LauraPalmer = () => {
           </div>
         </div>
 
-        <button className="btn-scroll btn-scroll--up">
+        <a
+          href="#page-cover"
+          onClick={smoothScrollFromAnchor}
+          className="btn-scroll btn-scroll--up"
+        >
           <span className="sr-only">Scroll up</span>
-        </button>
+        </a>
 
         <Link to="/chester-desmond" className="btn-next" goto-man>
           <span>

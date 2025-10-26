@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 
 export const DaleCooper = () => {
   const [isReady, setIsReady] = useState(false);
+  const { smoothScrollFromAnchor } = useSmoothScroll();
 
   useEffect(() => {
     setIsReady(true);
@@ -18,9 +20,13 @@ export const DaleCooper = () => {
         </h1>
         <h2>This is - excuse me - a damn fine cup of coffee</h2>
 
-        <button className="btn-scroll btn-scroll--down">
+        <a
+          href="#page-info"
+          onClick={smoothScrollFromAnchor}
+          className="btn-scroll btn-scroll--down"
+        >
           <span className="sr-only">Scroll down</span>
-        </button>
+        </a>
       </div>
       <div id="page-info" className="page-info page-info--dale-cooper sps">
         <h2>
@@ -101,9 +107,13 @@ export const DaleCooper = () => {
           </div>
         </div>
 
-        <button className="btn-scroll btn-scroll--up">
+        <a
+          href="#page-cover"
+          onClick={smoothScrollFromAnchor}
+          className="btn-scroll btn-scroll--up"
+        >
           <span className="sr-only">Scroll up</span>
-        </button>
+        </a>
 
         <a
           href="http://www.sho.com/twin-peaks"
