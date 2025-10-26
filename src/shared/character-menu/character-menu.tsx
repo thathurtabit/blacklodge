@@ -86,10 +86,10 @@ export const CharacterMenu = () => {
           <li className="nav-overlay-item nav-phillip">
             <Link
               className="nav-overlay-link"
-              to="/phillip-jefferies"
-              title="Phillip Jefferies"
+              to="/phillip-jeffries"
+              title="Phillip Jeffries"
             >
-              <span>Phillip Jefferies</span>
+              <span>Phillip Jeffries</span>
             </Link>
           </li>
           <li className="nav-overlay-item nav-dale">

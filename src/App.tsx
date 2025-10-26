@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Nav } from "./shared/nav/nav";
 import { CharacterMenu } from "./shared/character-menu/character-menu";
+import { useScrollToTop } from "./hooks/use-scroll-to-top";
 import { Home } from "./pages/home/home";
 import { Bob } from "./pages/bob/bob";
 import { ChesterDesmond } from "./pages/chester-desmond/chester-desmond";
@@ -9,12 +10,13 @@ import { DaleCooper } from "./pages/dale-cooper/dale-cooper";
 import { LauraPalmer } from "./pages/laura-palmer/laura-palmer";
 import { ManFromAnotherPlace } from "./pages/man-from-another-place/man-from-another-place";
 import { Mike } from "./pages/mike/mike";
-import { PhillipJeffries } from "./pages/phillip-jefferies/phillip-jeffries";
+import { PhillipJeffries } from "./pages/phillip-jeffries/phillip-jeffries";
 import { TheGiant } from "./pages/the-giant/the-giant";
 import { Footer } from "./shared/footer/footer";
 
 function App() {
   const [isReady, setIsReady] = useState(false);
+  useScrollToTop();
 
   useEffect(() => {
     setIsReady(true);

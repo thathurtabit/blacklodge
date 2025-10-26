@@ -24,7 +24,7 @@
 
           </div>
           
-          <a href="<?php echo $root; ?>/" class="btn-next" goto-bob>
+          <a href="<?php echo $root; ?>/" class="btn-next">
             <span><strong>Meet:</strong> The Black Lodge</span>
           </a>
 

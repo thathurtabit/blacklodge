@@ -1,124 +1,144 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
+import { Waypoint } from "react-waypoint";
+import { useWaypoints } from "../../hooks/use-waypoints";
 
 export const Bob = () => {
-  const [isReady, setIsReady] = useState(false);
   const { smoothScrollFromAnchor } = useSmoothScroll();
+  const { sectionInFocus, setSectionInFocus } = useWaypoints();
 
-  useEffect(() => {
-    setIsReady(true);
-  }, []);
+  console.log("Bob - sectionInFocus:", sectionInFocus);
 
   return (
     <>
-      <div
-        id="page-cover"
-        className={`page page--bob sps ${isReady ? "sps--abv" : ""}`}
+      <Waypoint
+        onEnter={() => {
+          setSectionInFocus("page-cover");
+        }}
+        topOffset={100}
       >
-        <h1>Bob</h1>
-        <h2>I'll catch you with my death bag</h2>
-
-        <a
-          href="#page-info"
-          onClick={smoothScrollFromAnchor}
-          className="btn-scroll btn-scroll--down"
+        <div
+          id="page-cover"
+          className={`page page--bob sps ${
+            sectionInFocus === "page-cover" ? "sps--abv" : ""
+          }`}
         >
-          <span className="sr-only">Scroll down</span>
-        </a>
-      </div>
-      <div id="page-info" className="page-info page-info--bob sps">
-        <h2>
-          <i className="zigzag-long"></i>
-          <span>Meet</span>Bob
-        </h2>
+          <h1>Bob</h1>
+          <h2>I'll catch you with my death bag</h2>
 
-        <div className="page-info-content bio container-fluid">
-          <div className="row">
-            <div className="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
-              <button
-                className="img-info-link video-open-close"
-                data-animation="false"
-                data-toggle="tooltip"
-                data-placement="right"
-                title="View video"
-              >
-                <span>
-                  <img
-                    src="/images/info-bob.jpg"
-                    alt="Black Lodge: Bob"
-                    className="bio-img"
-                  />
-                </span>
-              </button>
-            </div>
-
-            <div className="col-md-6 text-col">
-              <dl>
-                <dt>Name:</dt>
-                <dd>Bob (aka Killer Bob)</dd>
-              </dl>
-
-              <dl>
-                <dt>From:</dt>
-                <dd>An alternative plane of reality</dd>
-              </dl>
-
-              <dl>
-                <dt>Likes:</dt>
-                <dd>Murder, fire, garmonbozia, denim</dd>
-              </dl>
-
-              <dl>
-                <dt>Dislikes:</dt>
-                <dd>Getting caught</dd>
-              </dl>
-
-              <dl>
-                <dt>Bio:</dt>
-                <dd>
-                  Bob is an entity from the Black Lodge, a realm of pure evil
-                  which exists on an alternate plane of reality. He spends most
-                  of his time on Earth possessing human beings, although he also
-                  travels in the form of an owl. While possessing humans, he
-                  commits horrible acts to elicit pain, fear, and suffering from
-                  those around him; these feelings, which Black Lodge residents
-                  refer to collectively as "garmonbozia", act as a form of
-                  nourishment.{" "}
-                  <a
-                    href="http://twinpeaks.wikia.com/wiki/BOB"
-                    title="Source"
-                    target="_blank"
-                    className="btn-info-ext"
-                  >
-                    Src
-                  </a>
-                </dd>
-              </dl>
-            </div>
-          </div>
-
-          <div className="svg-content-border-wrap">
-            <svg className="svg-content-border">
-              <rect width="100%" height="100%" />
-            </svg>
-          </div>
+          <a
+            href="#page-info"
+            onClick={smoothScrollFromAnchor}
+            className="btn-scroll btn-scroll--down"
+          >
+            <span className="sr-only">Scroll down</span>
+          </a>
         </div>
-
-        <a
-          href="#page-cover"
-          onClick={smoothScrollFromAnchor}
-          className="btn-scroll btn-scroll--up"
+      </Waypoint>
+      <Waypoint
+        onEnter={() => {
+          setSectionInFocus("page-info");
+        }}
+        topOffset={-100}
+      >
+        <div
+          id="page-info"
+          className={`page-info page-info--bob sps ${
+            sectionInFocus === "page-info" ? "sps--blw" : ""
+          }`}
         >
-          <span className="sr-only">Scroll up</span>
-        </a>
+          <h2>
+            <i className="zigzag-long"></i>
+            <span>Meet</span>Bob
+          </h2>
 
-        <Link to="/mike" className="btn-next" goto-mike>
-          <span>
-            <strong>Meet:</strong> Mike
-          </span>
-        </Link>
-      </div>
+          <div className="page-info-content bio container-fluid">
+            <div className="row">
+              <div className="col-md-3 offset-md-1 col-lg-2 offset-lg-2 text-col bio-img-col">
+                <button
+                  className="img-info-link video-open-close"
+                  data-animation="false"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="View video"
+                >
+                  <span>
+                    <img
+                      src="/images/info-bob.jpg"
+                      alt="Black Lodge: Bob"
+                      className="bio-img"
+                    />
+                  </span>
+                </button>
+              </div>
+
+              <div className="col-md-6 text-col">
+                <dl>
+                  <dt>Name:</dt>
+                  <dd>Bob (aka Killer Bob)</dd>
+                </dl>
+
+                <dl>
+                  <dt>From:</dt>
+                  <dd>An alternative plane of reality</dd>
+                </dl>
+
+                <dl>
+                  <dt>Likes:</dt>
+                  <dd>Murder, fire, garmonbozia, denim</dd>
+                </dl>
+
+                <dl>
+                  <dt>Dislikes:</dt>
+                  <dd>Getting caught</dd>
+                </dl>
+
+                <dl>
+                  <dt>Bio:</dt>
+                  <dd>
+                    Bob is an entity from the Black Lodge, a realm of pure evil
+                    which exists on an alternate plane of reality. He spends
+                    most of his time on Earth possessing human beings, although
+                    he also travels in the form of an owl. While possessing
+                    humans, he commits horrible acts to elicit pain, fear, and
+                    suffering from those around him; these feelings, which Black
+                    Lodge residents refer to collectively as "garmonbozia", act
+                    as a form of nourishment.{" "}
+                    <a
+                      href="http://twinpeaks.wikia.com/wiki/BOB"
+                      title="Source"
+                      target="_blank"
+                      className="btn-info-ext"
+                    >
+                      Src
+                    </a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <div className="svg-content-border-wrap">
+              <svg className="svg-content-border">
+                <rect width="100%" height="100%" />
+              </svg>
+            </div>
+          </div>
+
+          <a
+            href="#page-cover"
+            onClick={smoothScrollFromAnchor}
+            className="btn-scroll btn-scroll--up"
+          >
+            <span className="sr-only">Scroll up</span>
+          </a>
+
+          <Link to="/mike" className="btn-next">
+            <span>
+              <strong>Meet:</strong> Mike
+            </span>
+          </Link>
+        </div>
+      </Waypoint>
 
       <div className="video-modal">
         <div className="video-modal-inner">

@@ -1,6 +1,17 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
+
+const navTooltipId = "nav-tooltip";
 
 export const Nav = () => {
+  const location = useLocation();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [location]);
+
   return (
     <nav className="navbar navbar-toggleable-sm fixed-top navbar-light">
       <button
@@ -11,32 +22,34 @@ export const Nav = () => {
         aria-controls="navbarToggler"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onClick={() => setIsNavOpen(!isNavOpen)}
       >
         <span className="navbar-toggler-bar"></span>
       </button>
       <Link
         className="navbar-brand nav-link"
         to="/"
-        data-animation="false"
-        data-toggle="tooltip"
-        data-placement="right"
-        title="Black Lodge"
+        data-tooltip-id={navTooltipId}
+        data-tooltip-place="right"
+        data-tooltip-content="Black Lodge"
       >
         <h1 className="sr-only">
           Black Lodge - "It will utterly annihilate your soul."
         </h1>
       </Link>
 
-      <div className="collapse navbar-collapse" id="navbarToggler">
+      <div
+        className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`}
+        id="navbarToggler"
+      >
         <ul className="navbar-nav">
           <li className="nav-item nav-bob">
             <Link
               className="nav-link"
               to="/bob"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Bob"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Bob"
             >
               <span className="hidden-md-up">Bob</span>
             </Link>
@@ -45,10 +58,9 @@ export const Nav = () => {
             <Link
               className="nav-link"
               to="/mike"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Mike"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Mike"
             >
               <span className="hidden-md-up">Mike</span>
             </Link>
@@ -57,10 +69,9 @@ export const Nav = () => {
             <Link
               className="nav-link"
               to="/man-from-another-place"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Man from another place"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Man from another place"
             >
               <span className="hidden-md-up">Man from another place</span>
             </Link>
@@ -69,10 +80,9 @@ export const Nav = () => {
             <Link
               className="nav-link"
               to="/the-giant"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="The Giant"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="The Giant"
             >
               <span className="hidden-md-up">The Giant</span>
             </Link>
@@ -81,10 +91,9 @@ export const Nav = () => {
             <Link
               className="nav-link"
               to="/laura-palmer"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Laura Palmer"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Laura Palmer"
             >
               <span className="hidden-md-up">Laura Palmer</span>
             </Link>
@@ -93,10 +102,9 @@ export const Nav = () => {
             <Link
               className="nav-link"
               to="/chester-desmond"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Chester Desmond"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Chester Desmond"
             >
               <span className="hidden-md-up">Chester Desmond</span>
             </Link>
@@ -104,29 +112,28 @@ export const Nav = () => {
           <li className="nav-item nav-phillip">
             <Link
               className="nav-link"
-              to="/phillip-jefferies"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Phillip Jefferies"
+              to="/phillip-jeffries"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Phillip Jeffries"
             >
-              <span className="hidden-md-up">Phillip Jefferies</span>
+              <span className="hidden-md-up">Phillip Jeffries</span>
             </Link>
           </li>
           <li className="nav-item nav-dale">
             <Link
               className="nav-link"
               to="/dale-cooper"
-              data-animation="false"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Dale Cooper"
+              data-tooltip-id={navTooltipId}
+              data-tooltip-place="right"
+              data-tooltip-content="Dale Cooper"
             >
               <span className="hidden-md-up">Dale Cooper</span>
             </Link>
           </li>
         </ul>
       </div>
+      <Tooltip id={navTooltipId} />
     </nav>
   );
 };

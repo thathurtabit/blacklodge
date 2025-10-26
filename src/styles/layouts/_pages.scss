@@ -172,8 +172,8 @@
   content: "Chester Desmond";
 }
 
-.page-info.page-info--phillip-jefferies::before {
-  content: "Phillip Jefferies";
+.page-info.page-info--phillip-jeffries::before {
+  content: "Phillip Jeffries";
 }
 
 .page-info.page-info--dale-cooper::before {
@@ -246,39 +246,39 @@
 }
 
 .page--home::before {
-  background-image: url("../images/bg-red-room.jpg");
+  background-image: url("/images/bg-red-room.jpg");
 }
 
 .page--bob::before {
-  background-image: url("../images/bg-bob.jpg");
+  background-image: url("/images/bg-bob.jpg");
 }
 
 .page--the-man::before {
-  background-image: url("../images/bg-the-man.jpg");
+  background-image: url("/images/bg-the-man.jpg");
 }
 
 .page--mike::before {
-  background-image: url("../images/bg-mike.jpg");
+  background-image: url("/images/bg-mike.jpg");
 }
 
 .page--laura-palmer::before {
-  background-image: url("../images/bg-laura-palmer.jpg");
+  background-image: url("/images/bg-laura-palmer.jpg");
 }
 
 .page--the-giant::before {
-  background-image: url("../images/bg-the-giant.jpg");
+  background-image: url("/images/bg-the-giant.jpg");
 }
 
 .page--chester-desmond::before {
-  background-image: url("../images/bg-chester-desmond.jpg");
+  background-image: url("/images/bg-chester-desmond.jpg");
 }
 
-.page--phillip-jefferies::before {
-  background-image: url("../images/bg-phillip-jefferies.jpg");
+.page--phillip-jeffries::before {
+  background-image: url("/images/bg-phillip-jeffries.jpg");
 }
 
 .page--dale-cooper::before {
-  background-image: url("../images/bg-dale-cooper.jpg");
+  background-image: url("/images/bg-dale-cooper.jpg");
 }
 
 .page-info-content {
@@ -615,7 +615,7 @@ cite {
   bottom: -5px;
   left: 50%;
   overflow: hidden;
-  background: url("../images/zigzag-long.png") repeat-x;
+  background: url("/images/zigzag-long.png") repeat-x;
   animation: zigzag-bg-anim 12s linear infinite;
 }
 

@@ -115,9 +115,9 @@ export const ChesterDesmond = () => {
           <span className="sr-only">Scroll up</span>
         </a>
 
-        <Link to="/phillip-jefferies" className="btn-next" goto-man>
+        <Link to="/phillip-jeffries" className="btn-next">
           <span>
-            <strong>Meet:</strong> Phillip Jefferies
+            <strong>Meet:</strong> Phillip Jeffries
           </span>
         </Link>
       </div>

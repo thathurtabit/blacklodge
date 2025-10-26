@@ -74,7 +74,7 @@
         <span class="sr-only">Scroll up</span>
       </button>
 
-      <a href="<?php echo $root; ?>/chester-desmond" class="btn-next" goto-man>
+      <a href="<?php echo $root; ?>/chester-desmond" class="btn-next">
         <span><strong>Meet:</strong> Chester Desmond</span>
       </a>
 

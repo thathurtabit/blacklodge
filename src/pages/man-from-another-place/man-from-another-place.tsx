@@ -113,7 +113,7 @@ export const ManFromAnotherPlace = () => {
           <span className="sr-only">Scroll up</span>
         </a>
 
-        <Link to="/the-giant" className="btn-next" goto-man>
+        <Link to="/the-giant" className="btn-next">
           <span>
             <strong>Meet:</strong> The Giant
           </span>

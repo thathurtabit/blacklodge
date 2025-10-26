@@ -110,7 +110,7 @@ export const LauraPalmer = () => {
           <span className="sr-only">Scroll up</span>
         </a>
 
-        <Link to="/chester-desmond" className="btn-next" goto-man>
+        <Link to="/chester-desmond" className="btn-next">
           <span>
             <strong>Meet:</strong> Chester Desmond
           </span>
