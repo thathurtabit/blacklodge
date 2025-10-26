@@ -3,10 +3,12 @@ import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 import { Waypoint } from "react-waypoint";
 import { useWaypoints } from "../../hooks/use-waypoints";
 import { WAYPOINTS_OFFSET } from "../../settings/settings";
+import { useVideoModal } from "../../hooks/use-video-modal";
 
 export const Bob = () => {
   const { smoothScrollFromAnchor } = useSmoothScroll();
   const { sectionInFocus, setSectionInFocus } = useWaypoints();
+  const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
   return (
     <>
@@ -62,6 +64,7 @@ export const Bob = () => {
                   data-toggle="tooltip"
                   data-placement="right"
                   title="View video"
+                  onClick={openVideoModal}
                 >
                   <span>
                     <img
@@ -140,9 +143,13 @@ export const Bob = () => {
           </Link>
         </div>
       </Waypoint>
-      <div className="video-modal">
+
+      <div className={`video-modal ${isVideoModalOpen ? "open" : ""}`}>
         <div className="video-modal-inner">
-          <button className="btn-close-video video-open-close">
+          <button
+            className="btn-close-video video-open-close"
+            onClick={closeVideoModal}
+          >
             <span className="sr-only">Close video</span>X
           </button>
 

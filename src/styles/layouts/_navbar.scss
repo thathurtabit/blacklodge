@@ -32,7 +32,6 @@
 .navbar-nav {
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 
@@ -42,7 +41,13 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-up(sm) {
+  .navbar-nav {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
   #nav-tooltip.react-tooltip {
     display: none;
   }

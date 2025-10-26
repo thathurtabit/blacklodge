@@ -3,10 +3,12 @@ import { useWaypoints } from "../../hooks/use-waypoints";
 import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 import { WAYPOINTS_OFFSET } from "../../settings/settings";
 import { Link } from "react-router-dom";
+import { useVideoModal } from "../../hooks/use-video-modal";
 
 export const Mike = () => {
   const { smoothScrollFromAnchor } = useSmoothScroll();
   const { sectionInFocus, setSectionInFocus } = useWaypoints();
+  const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
   return (
     <>
@@ -62,6 +64,7 @@ export const Mike = () => {
                   data-toggle="tooltip"
                   data-placement="right"
                   title="View video"
+                  onClick={openVideoModal}
                 >
                   <span>
                     <img
@@ -142,14 +145,17 @@ export const Mike = () => {
         </div>
       </Waypoint>
 
-      <div className="video-modal">
+      <div className={`video-modal ${isVideoModalOpen ? "open" : ""}`}>
         <div className="video-modal-inner">
-          <button className="btn-close-video video-open-close">
+          <button
+            className="btn-close-video video-open-close"
+            onClick={closeVideoModal}
+          >
             <span className="sr-only">Close video</span>X
           </button>
           <div className="embed-responsive embed-responsive-16by9">
             <iframe
-              src="https://www.youtube.com/embed/kIzimmrDtTg?controls=1&showinfo=0&rel=0"
+              src="https://www.youtube.com/embed/fINzQdg1R48?controls=1&showinfo=0&rel=0"
               className="embed-responsive-item"
             ></iframe>
           </div>

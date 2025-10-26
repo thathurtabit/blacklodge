@@ -3,10 +3,12 @@ import { useWaypoints } from "../../hooks/use-waypoints";
 import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 import { WAYPOINTS_OFFSET } from "../../settings/settings";
 import { Link } from "react-router-dom";
+import { useVideoModal } from "../../hooks/use-video-modal";
 
 export const TheGiant = () => {
   const { smoothScrollFromAnchor } = useSmoothScroll();
   const { sectionInFocus, setSectionInFocus } = useWaypoints();
+  const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
   return (
     <>
@@ -62,6 +64,7 @@ export const TheGiant = () => {
                   data-toggle="tooltip"
                   data-placement="right"
                   title="View video"
+                  onClick={openVideoModal}
                 >
                   <span>
                     <img
@@ -143,9 +146,12 @@ export const TheGiant = () => {
         </div>
       </Waypoint>
 
-      <div className="video-modal">
+      <div className={`video-modal ${isVideoModalOpen ? "open" : ""}`}>
         <div className="video-modal-inner">
-          <button className="btn-close-video video-open-close">
+          <button
+            className="btn-close-video video-open-close"
+            onClick={closeVideoModal}
+          >
             <span className="sr-only">Close video</span>X
           </button>
 
