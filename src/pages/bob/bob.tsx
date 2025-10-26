@@ -2,12 +2,11 @@ import { Link } from "react-router-dom";
 import { useSmoothScroll } from "../../hooks/use-smooth-scroll";
 import { Waypoint } from "react-waypoint";
 import { useWaypoints } from "../../hooks/use-waypoints";
+import { WAYPOINTS_OFFSET } from "../../settings/settings";
 
 export const Bob = () => {
   const { smoothScrollFromAnchor } = useSmoothScroll();
   const { sectionInFocus, setSectionInFocus } = useWaypoints();
-
-  console.log("Bob - sectionInFocus:", sectionInFocus);
 
   return (
     <>
@@ -15,7 +14,8 @@ export const Bob = () => {
         onEnter={() => {
           setSectionInFocus("page-cover");
         }}
-        topOffset={100}
+        topOffset={WAYPOINTS_OFFSET}
+        bottomOffset={WAYPOINTS_OFFSET}
       >
         <div
           id="page-cover"
@@ -39,7 +39,8 @@ export const Bob = () => {
         onEnter={() => {
           setSectionInFocus("page-info");
         }}
-        topOffset={-100}
+        topOffset={WAYPOINTS_OFFSET}
+        bottomOffset={WAYPOINTS_OFFSET}
       >
         <div
           id="page-info"
@@ -139,7 +140,6 @@ export const Bob = () => {
           </Link>
         </div>
       </Waypoint>
-
       <div className="video-modal">
         <div className="video-modal-inner">
           <button className="btn-close-video video-open-close">
