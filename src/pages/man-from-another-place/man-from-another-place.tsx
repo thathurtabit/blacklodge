@@ -68,7 +68,7 @@ export const ManFromAnotherPlace = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-man.jpg"
+                      src="images/info-man.jpg"
                       alt="Black Lodge: The Man from Another Place"
                       className="bio-img"
                     />

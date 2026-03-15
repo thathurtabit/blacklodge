@@ -68,7 +68,7 @@ export const PhillipJeffries = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-phillip.jpg"
+                      src="images/info-phillip.jpg"
                       alt="Black Lodge: Phillip Jeffries"
                       className="bio-img"
                     />

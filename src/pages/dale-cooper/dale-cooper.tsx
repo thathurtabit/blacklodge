@@ -69,7 +69,7 @@ export const DaleCooper = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-dale.jpg"
+                      src="images/info-dale.jpg"
                       alt="Black Lodge: Dale Cooper"
                       className="bio-img"
                     />

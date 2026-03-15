@@ -68,7 +68,7 @@ export const LauraPalmer = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-laura.jpg"
+                      src="images/info-laura.jpg"
                       alt="Black Lodge: Laura Palmer"
                       className="bio-img"
                     />

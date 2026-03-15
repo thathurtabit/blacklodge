@@ -70,7 +70,7 @@ export const ChesterDesmond = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-chester.jpg"
+                      src="images/info-chester.jpg"
                       alt="Black Lodge: Chester Desmond"
                       className="bio-img"
                     />

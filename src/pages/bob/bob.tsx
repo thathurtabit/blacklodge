@@ -68,7 +68,7 @@ export const Bob = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-bob.jpg"
+                      src="images/info-bob.jpg"
                       alt="Black Lodge: Bob"
                       className="bio-img"
                     />

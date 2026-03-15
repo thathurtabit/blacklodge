@@ -68,7 +68,7 @@ export const TheGiant = () => {
                 >
                   <span>
                     <img
-                      src="/images/info-giant.jpg"
+                      src="images/info-giant.jpg"
                       alt="Black Lodge: The Giant"
                       className="bio-img"
                     />
